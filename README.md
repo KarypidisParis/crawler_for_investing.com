@@ -3,8 +3,8 @@ Python for indices historical values
 
 Create and activate a python3 venv
 
-$ python3 -m venv .venv
-$ source .venv/bin/activate
+$ python3 -m venv .venv <br />
+$ source .venv/bin/activate<br />
 
 Install requirement.txt
 
@@ -13,8 +13,8 @@ Install requirement.txt
 
 Files
 
-requirements.txt - required packages
-indices.py - contains indices parameters to download
-IndiceHistoricalData.py - main function
+requirements.txt - required packages <br />
+indices.py - contains indices parameters to download <br />
+IndiceHistoricalData.py - main function <br />
 
 Choose indice, set Header, set time period and frequency, download data & enjoy! 
