@@ -2,6 +2,7 @@ from lxml.etree import fromstring
 import pandas as pd
 import calendar, requests
 from indices import *
+from commodities import *
 
 # set https header parameters
 headers = {
@@ -50,15 +51,14 @@ class IndiceHistoricalData():
 
 	#print retrieved data
 	def saveDataCSV(self):
-		self.observations.to_csv('data.csv', sep='\t', encoding='utf-8')
-
+		self.observations.to_csv(self.data['name']+'.csv', sep='\t', encoding='utf-8')
 
 if __name__ == "__main__":
 
 	#first set Headers and FormData	
 	ihd = IndiceHistoricalData('https://www.investing.com/instruments/HistoricalDataAjax')
 	ihd.setHeaders(headers)
-	ihd.setFormData(SPX_NYSE_USD)
+	ihd.setFormData(NGF8)
 	
 	#second set Variables
 	ihd.updateFrequency('Monthly')
@@ -67,6 +67,5 @@ if __name__ == "__main__":
 	ihd.downloadData()
 	ihd.printData()
 	ihd.saveDataCSV()
-
 
 
