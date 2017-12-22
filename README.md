@@ -18,3 +18,18 @@ indices.py - contains indices parameters to download <br />
 IndiceHistoricalData.py - main function <br />
 
 Choose indice, set Header, set time period and frequency, download data & enjoy! 
+
+Example
+
+	#first set Headers and FormData	
+	ihd = IndiceHistoricalData('https://www.investing.com/instruments/HistoricalDataAjax')
+	ihd.setHeaders(headers)
+	ihd.setFormData(NGF8)
+	
+	#second set Variables
+	ihd.updateFrequency('Monthly')
+	ihd.updateStartingEndingDate('1/1/2010', '12/20/2017')
+	ihd.setSortOreder('ASC')
+	ihd.downloadData()
+	ihd.printData()
+	ihd.saveDataCSV()
