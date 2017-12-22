@@ -19,7 +19,7 @@ IndiceHistoricalData.py - main function <br />
 
 Choose indice, set Header, set time period and frequency, download data & enjoy! 
 
-Example
+Example - See IndiceHistoricalData.py
 
 	#first set Headers and FormData	
 	ihd = IndiceHistoricalData('https://www.investing.com/instruments/HistoricalDataAjax')
