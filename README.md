@@ -1,5 +1,5 @@
 # crawler_for_investing.com
-Python for indices historical from investing.com
+Python script - Crawlling indices historical values from investing.com
 
 Create and activate a python3 venv
 
