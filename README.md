@@ -46,7 +46,10 @@ Example - See Articles.py
 	ad = ArticlesData()
 	ad.setHeaders(headers)
 	ad.updateStartingEndingDate(datetime.date(2017,12, 18), datetime.date(2017,12, 25))
-#	ad.downloadListOfArticles("https://www.investing.com/indices/eu-stoxx50-news")
+	
+	ad.downloadListOfArticles("https://www.investing.com/indices/eu-stoxx50-news")
+	or
 	ad.downloadListOfArticlesRepeatedly("https://www.investing.com/indices/eu-stoxx50-news")
+
 	ad.downloadArticleText()
-#	ad.printListOfArticles()
+	ad.printListOfArticles()
