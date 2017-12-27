@@ -43,13 +43,16 @@ Set Header, set time period, download data, save as .txt & enjoy!
 
 Example - See Articles.py
 
-	ad = ArticlesData()
-	ad.setHeaders(headers)
-	ad.updateStartingEndingDate(datetime.date(2017,12, 18), datetime.date(2017,12, 25))
+	DEBUG = True
 	
-	ad.downloadListOfArticles("https://www.investing.com/indices/eu-stoxx50-news")
-	or
-	ad.downloadListOfArticlesRepeatedly("https://www.investing.com/indices/eu-stoxx50-news")
+	#could be found on articles/articlesData.py
+	indicator = eurostoxx_reuters
+
+	ad = ArticlesData(indicator)
+	ad.setHeaders(headers)
+	ad.updateStartingEndingDate(datetime.date(2017,12, 20), datetime.date(2017,12, 27))
+	ad.downloadListOfArticlesRepeatedly()
+	ad.printListOfArticles()
 
 	ad.downloadArticleText()
-	ad.printListOfArticles()
+	print("[+] DONE")
