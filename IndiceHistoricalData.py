@@ -1,8 +1,8 @@
 from lxml.etree import fromstring
 import pandas as pd
 import calendar, requests
-from indices import *
-from commodities import *
+from indices.indices import *
+from indices.commodities import *
 
 # set https header parameters
 headers = {
