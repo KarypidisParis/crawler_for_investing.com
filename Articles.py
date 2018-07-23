@@ -51,7 +51,28 @@ class ArticlesData():
 			article_titles.remove(" ")
 		except ValueError:
 			pass
-				
+
+
+
+		#the problem is caused because of the sponsored article, which does not have a date
+		#the sponsored is deleted         
+		if len(article_titles) > len(article_dates):	
+			del(article_titles[3])
+			del(article_title_links[3])                        
+            
+		# there is also an add sometimes in the 6th position after the sponsored
+		if len(article_titles) > len(article_dates):	
+			del(article_titles[5])
+            
+		# there is also an add sometimes in the 8th position after the sponsored
+		if len(article_titles) > len(article_dates):	
+			del(article_titles[7])            
+
+		# if more than two adds and one sponsored is appeared delete the first	
+		while (len(article_titles) > len(article_dates):			
+			del(article_titles[0])  
+
+			
 		#if ~40 articles are outdated stop the procedure
 		for i in range(len(article_titles)):
 			#check if 'date' is formet like "Dec 22, 2017" or "11 hours before" or "am" etc
