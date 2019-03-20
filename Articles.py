@@ -69,7 +69,7 @@ class ArticlesData():
 			del(article_titles[7])            
 
 		# if more than two adds and one sponsored is appeared delete the first	
-		while (len(article_titles) > len(article_dates):			
+		while (len(article_titles) > len(article_dates)):			
 			del(article_titles[0])  
 
 			
@@ -178,7 +178,8 @@ if __name__ == "__main__":
 
 	ad = ArticlesData(indicator)
 	ad.setHeaders(headers)
-	ad.updateStartingEndingDate(datetime.date(2017,12, 20), datetime.date(2017,12, 27))
+	#DATE FORMAT: YYYY, MM, DD
+	ad.updateStartingEndingDate(datetime.date(2019, 3, 3), datetime.date(2019, 3, 20))
 	ad.downloadListOfArticlesRepeatedly()
 #	ad.printListOfArticles()
 
